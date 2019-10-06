@@ -11,4 +11,6 @@ export class AppComponent {
     funnypic = FunnyPics[Math.floor(Math.random() * FunnyPics.length)];
     link = GithubLink;
     github = GitHubIcon;
+
+    showRoundBoy = false;
 }

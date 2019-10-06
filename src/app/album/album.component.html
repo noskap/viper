@@ -1,19 +1,13 @@
 <div class="pb-5 col-12 form-inline">
-	<!--	<h3 class="pr-5 col-6 text-center">Album</h3>-->
-	<div class="col form-check-inline">
-		<div class="text-center">
-			Remove duplicate words
-		</div>
+	<button class="col" (click)="removeDuplicateWords = !removeDuplicateWords">
+		Remove duplicate words
 		<input class="" type="checkbox" [(ngModel)]="removeDuplicateWords">
-	</div>
-	<div class="col form-check-inline">
-		<div class="text-center">
-			Remove duplicate titles
-		</div>
+	</button>
+	<button class="col" (click)="removeDuplicateTitles = !removeDuplicateTitles">
+		Remove duplicate titles
 		<input class="" type="checkbox" [(ngModel)]="removeDuplicateTitles">
-	</div>
+	</button>
 	<div class="col ">
-		<!--		<input type="checkbox">-->
 	</div>
 	<div class="col">
 		<button class="form-control" (click)="generate()">Generate</button>

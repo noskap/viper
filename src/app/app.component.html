@@ -220,13 +220,13 @@
 			</h6>
 		</a>
 	</div>
-	<div class="row">
+	<div class="row pointer" (click)="showRoundBoy =!showRoundBoy">
 		<div class="col text-center d-flex">
 			
 			<h6 class="col no-overflow">Made in Angular with love</h6>
 		</div>
 	</div>
-	<div class="row w-100">
+	<div class="row w-100" *ngIf="showRoundBoy">
 		<div class="col"></div>
 		<img class="col round-boy img-thumbnail  d-block"
 			 src="https://media.giphy.com/media/26gssIytJvy1b1THO/giphy.gif"
