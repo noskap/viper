@@ -1690,5 +1690,5 @@ export const SortedTitles = [
 	'Google "Rapper Viper"',
 	"Google Rapper Viper Now",
 	`The 6' 2" Shorty`,
-	"The Beast of the Best"
+	"The Beast of the Best",'Y Tha Fuk is Tibet still Aint free ?'
 ];

@@ -1,11 +1,16 @@
-<div class="row pb-5">
+<div class="container w-100">
 	
-	<h3 class="pr-5">Album</h3>
-	<button (click)="generate()">Generate</button>
-</div>
-
-<div class="row py-5">
+	<div class="row pb-5">
+		
+		<h3 class="pr-5">Album</h3>
+		<button (click)="generate()">Generate</button>
+	</div>
 	
-	{{title}}
+	<div class="row py-5">
+		<div>
+			
+			{{title}}
+		</div>
+	</div>
+	{{count}} Titles generated
 </div>
-{{count}} Titles generated

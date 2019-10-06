@@ -22,6 +22,7 @@ export class AlbumComponent implements OnInit {
 	}
 
 	generate(): void {
+		this.title = '';
 		console.log('do the generate');
 		let longest = '';
 		let wordlist = [];
@@ -49,13 +50,30 @@ export class AlbumComponent implements OnInit {
 			}
 			linecount++;
 		}
+		wordlist = [...new Set(wordlist)];
 		console.log('Linecount', linecount);
 		console.log('Loingest word');
 		console.log(longest);
 		console.log('word count', wordlist.length);
 		// console.log(words);
+		const rand = Math.ceil(Math.random() * 1000);
+		console.log('Random number', rand);
 
-		console.log('Random number', Math.ceil(Math.random() * 1000));
+		let c = 0;
+
+		// console.log(Math.floor(Math.random() * 10));
+		while (c < Math.floor(Math.random() * 7)) {
+			let w = wordlist[Math.floor(Math.random() * 1000)];
+			if (w) {
+				this.title += w + ' ';
+			}
+		}
+		console.log(this.title);
+		console.log(this.title.length, !!this.title);
+		if(!this.title){
+			this.generate();
+		}
+
 	}
 
 }
