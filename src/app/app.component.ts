@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AngularIcon, FunnyPics, GitHubIcon, GithubLink, Title} from './constants';
+import {FunnyPics, GitHubIcon, GithubLink, Title} from './constants';
 
 @Component({
     selector: 'app-root',
