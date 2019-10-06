@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Titles} from "../constants";
+import {SortedTitles, Titles} from "../constants";
 
 @Component({
 	selector: 'app-album',
@@ -11,7 +11,8 @@ export class AlbumComponent implements OnInit {
 	public title: string = "";
 	public reader;
 	public file;
-	titles = Titles;
+	titles = SortedTitles;
+	count = 0;
 
 	constructor() {
 	}
@@ -21,40 +22,40 @@ export class AlbumComponent implements OnInit {
 	}
 
 	generate(): void {
-		/*
-			import random
-			import re
+		console.log('do the generate');
+		let longest = '';
+		let wordlist = [];
+		this.count++;
+		// let words = [];
+		let linecount = 0;
+		for (const line of this.titles) {
+			let i = 0;
+			// wordlist = new RegExp("[^\S]", " ")
+			// console.log(wordlist);
+			// while (i < this.titles.length) {
+			// 	if (line !== words[i]) {
+			// 		words[i] = line;
+			// 	}
+			// 	// console.log(i);
+			// 	i++;
+			//
+			// }
+			for (let word of line.split(' ')) {
+				// console.log(word)
+				wordlist.push(word)
+			}
+			if (line.length > longest.length) {
+				longest = line;
+			}
+			linecount++;
+		}
+		console.log('Linecount', linecount);
+		console.log('Loingest word');
+		console.log(longest);
+		console.log('word count', wordlist.length);
+		// console.log(words);
 
-			def main():
-			words = []
-			longest = 0
-			with open("temp.txt") as f:
-			for line in f:
-			word_list = re.sub("[^\S]", " ", line[:line.index('[')]).split()
-			i = 0
-			while i < len(word_list):
-			if i not in words:
-			words.append([])
-			if word_list[i] not in words[i]:
-			words[i].append(word_list[i])
-			i += 1
-			if(i > longest):
-			longest = i
-
-
-			length = random.randint(1, longest)
-			count = 0
-			to_return = ""
-			while count < length:
-			rando = random.randint(0, len(words[count]) - 1)
-			to_return += str(words[count][rando])
-			to_return += " "
-			count += 1
-			print to_return
-
-			if __name__ == '__main__':
-			main()
-		*/
+		console.log('Random number', Math.ceil(Math.random() * 1000));
 	}
 
 }
