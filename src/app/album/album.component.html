@@ -1,16 +1,31 @@
-<div class="container w-100">
-	
-	<div class="row pb-5">
-		
-		<h3 class="pr-5">Album</h3>
-		<button (click)="generate()">Generate</button>
-	</div>
-	
-	<div class="row py-5">
-		<div>
-			
-			{{title}}
+<div class="pb-5 col-12 form-inline">
+	<!--	<h3 class="pr-5 col-6 text-center">Album</h3>-->
+	<div class="col form-check-inline">
+		<div class="text-center">
+			Remove duplicate words
 		</div>
+		<input class="" type="checkbox" [(ngModel)]="duplicateWords">
 	</div>
+	<div class="col form-check-inline">
+		<div class="text-center">
+			Remove duplicate titles
+		</div>
+		<input class="" type="checkbox" [(ngModel)]="duplicateTitles">
+	</div>
+	<div class="col ">
+		<!--		<input type="checkbox">-->
+	</div>
+	<div class="col">
+		<button class="form-control" (click)="generate()">Generate</button>
+	</div>
+</div>
+
+<div class="py-5 col-12 vw-100">
+	<div class="col-12 text-center">
+		{{title}}
+	</div>
+</div>
+
+<div class="col-12 text-center">
 	{{count}} Titles generated
 </div>

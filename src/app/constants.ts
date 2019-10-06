@@ -1693,4 +1693,6 @@ export const SortedTitles = [
     'The Beast of the Best', 'Y Tha Fuk is Tibet still Aint free ?'
 ];
 
-export const Title = 'Viper album generator';
+export const Title = 'Viper Album Generator';
+// TODO add more funny pics
+export const FunnyPics = ['https://upload.wikimedia.org/wikipedia/en/a/a0/Viper_Shoe_Selfie.jpg'];

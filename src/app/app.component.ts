@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Title} from './constants';
+import {FunnyPics, Title} from './constants';
 
 @Component({
     selector: 'app-root',
@@ -8,4 +8,5 @@ import {Title} from './constants';
 })
 export class AppComponent {
     title = Title;
+    funnypic = FunnyPics[Math.floor(Math.random() * FunnyPics.length)];
 }

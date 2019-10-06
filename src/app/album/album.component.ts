@@ -11,8 +11,10 @@ export class AlbumComponent implements OnInit {
     public title = '';
     public reader;
     public file;
-    titles = SortedTitles;
-    count = 0;
+    public titles = SortedTitles;
+    public count = 0;
+    public duplicateWords = false;
+    public duplicateTitles = true;
 
     constructor() {
     }
@@ -25,11 +27,13 @@ export class AlbumComponent implements OnInit {
         this.title = '';
         // console.log('do the generate');
         let longest = '';
-        const wordlist = [];
+        let wordlist = [];
         this.count++;
         let titles = this.titles;
-        // remove duplicate titles
-        titles = [...new Set(titles)];
+        if (this.duplicateTitles) {
+            // remove duplicate titles
+            titles = [...new Set(titles)];
+        }
 
         let linecount = 0;
         for (const line of titles) {
@@ -42,9 +46,10 @@ export class AlbumComponent implements OnInit {
             linecount++;
         }
 
-        // remove duplicate words
-        // wordlist = [...new Set(wordlist)];
-
+        if (this.duplicateWords) {
+            // remove duplicate words
+            wordlist = [...new Set(wordlist)];
+        }
         // stats
         // this.showStats(linecount, longest, wordlist)
         // const rand = Math.ceil(Math.random() * 1000);
