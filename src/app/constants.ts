@@ -1692,3 +1692,5 @@ export const SortedTitles = [
 	`The 6' 2" Shorty`,
 	"The Beast of the Best",'Y Tha Fuk is Tibet still Aint free ?'
 ];
+
+export const Title = 'Viper album generator'

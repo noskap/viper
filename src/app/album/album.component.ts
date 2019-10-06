@@ -74,6 +74,9 @@ export class AlbumComponent implements OnInit {
 			this.generate();
 		}
 
+		//TODO use album title to find album cover on flickr api
+
+
 	}
 
 }

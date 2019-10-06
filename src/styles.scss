@@ -48,3 +48,18 @@ html, body {
 .no-overflow {
   overflow: unset;
 }
+
+.viper {
+  max-height:171px;
+  //max-width:171px;
+}
+
+.title {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+}
