@@ -13,8 +13,8 @@ export class AlbumComponent implements OnInit {
     public file;
     public titles = SortedTitles;
     public count = 0;
-    public duplicateWords = false;
-    public duplicateTitles = true;
+    public removeDuplicateWords = false;
+    public removeDuplicateTitles = true;
 
     constructor() {
     }
@@ -30,7 +30,7 @@ export class AlbumComponent implements OnInit {
         let wordlist = [];
         this.count++;
         let titles = this.titles;
-        if (this.duplicateTitles) {
+        if (this.removeDuplicateTitles) {
             // remove duplicate titles
             titles = [...new Set(titles)];
         }
@@ -46,7 +46,7 @@ export class AlbumComponent implements OnInit {
             linecount++;
         }
 
-        if (this.duplicateWords) {
+        if (this.removeDuplicateWords) {
             // remove duplicate words
             wordlist = [...new Set(wordlist)];
         }
