@@ -1,0 +1,46 @@
+
+//Bootstrap
+@import 'variables';
+// version 4
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+// Toast
+//@import '../node_modules/angular2-toaster/src/toaster';
+// ngx-bootstrap
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}
+html, body {
+ min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+//#wrap {wrap
+//  min-height: 100vh;
+//}
+
+#main {
+  flex:1;
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.round-boy {
+  border-radius: 50px !important;
+}
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  //display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
