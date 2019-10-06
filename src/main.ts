@@ -1,3 +1,9 @@
+/*
+* BASED	ON VIPER GENERATOR BY PROSIF
+* https://github.com/prosif/viper-generator
+* THANK YOU
+*/
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
