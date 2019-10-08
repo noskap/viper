@@ -40,7 +40,7 @@ export class AlbumComponent implements OnInit {
             for (const word of line.split(' ')) {
                 wordlist.push(word);
             }
-            if (line.length > longest.length) {
+            if (line.split('').length > longest.length) {
                 longest = line;
             }
             linecount++;
@@ -56,14 +56,16 @@ export class AlbumComponent implements OnInit {
         // console.log('Random number', rand);
 
         const c = 0;
-
-        while (c < Math.floor(Math.random() * 7)) {
+        const amountofwords = Math.floor(Math.random() * 7);
+        while (c < amountofwords) {
             const w = wordlist[Math.floor(Math.random() * 1000)];
             if (w) {
                 this.title += w + ' ';
             }
         }
         console.log(this.title);
+        console.log('Words:', amountofwords);
+
         if (!this.title) { // if generated title is nothing, do again
             this.generate();
         }
