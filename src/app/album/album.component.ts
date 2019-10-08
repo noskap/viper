@@ -40,7 +40,7 @@ export class AlbumComponent implements OnInit {
             for (const word of line.split(' ')) {
                 wordlist.push(word);
             }
-            if (line.split('').length > longest.length) {
+            if (line.length > longest.length) {
                 longest = line;
             }
             linecount++;
