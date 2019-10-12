@@ -1690,7 +1690,7 @@ export const SortedTitles = [
     'Google "Rapper Viper"',
     'Google Rapper Viper Now',
     `The 6' 2" Shorty`,
-    'The Beast of the Best', 'Y Tha Fuk is Tibet still Aint free ?'
+    'The Beast of the Best', 'Y Tha Fuk is Tibet still Aint free ?', '#woke crew nitnendo death grips nintendo death-grips is online shoe on head woke kang we wuz kangs bless'
 ];
 
 export const Title = 'Viper Album Generator';
