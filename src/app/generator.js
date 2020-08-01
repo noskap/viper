@@ -33,7 +33,12 @@ const generator = (removeDuplicateTitles = true, removeDuplicateWords = false, s
   }
 
   let count = 0;
-  const amountofwords = Math.ceil(Math.random() * 7);
+
+  let amountofwords = Math.ceil(Math.random() * 7);
+  if (amountofwords < 2) {
+    amountofwords = 2;
+  }
+
   while (count < amountofwords) {
     const w = wordlist[Math.floor(Math.random() * 1000)];
     if (w) {
@@ -60,8 +65,7 @@ const generator = (removeDuplicateTitles = true, removeDuplicateWords = false, s
 
 const logStats = (linecount, longest, wordlist) => {
   console.log('Linecount', linecount);
-  console.log('Loingest word');
-  console.log(longest);
+  console.log('Loingest word', longest);
   console.log('word count', wordlist.length);
 }
 
